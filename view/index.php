@@ -10,7 +10,7 @@
 	<?php error_reporting(E_ALL); ?>
 	<center>Registration
 	<?php include '../query/insert.php'; ?>
-	<form method="post" action="../query/insert.php" name="registration">
+	<form method="post" action="../query/insert.php">
 		Roll: <br>
 		<input type="text" name="roll" required="required"
 		<?php if(!empty($rowDetails)) ?>
@@ -40,11 +40,8 @@
 		<br>
 		<input type="submit" name="Submit">
 		<input type="hidden" name="submit" value=
-		<?php if(!empty($rowDetails))
-			echo 0;
-			else
-			echo 1;
-		?>
+		<?php if(!empty($rowDetails)) ?>
+		"1"
 		/>
 		<br>
 	</form>
